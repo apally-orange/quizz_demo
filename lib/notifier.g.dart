@@ -6,7 +6,22 @@ part of 'notifier.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$currentQuizzHash() => r'7c7abd2480ca9bd57625c092238cf108921c7493';
+String _$currentIndexHash() => r'6353bf34d68f2161c96e4b2901e0e80c41c4cae8';
+
+/// See also [CurrentIndex].
+@ProviderFor(CurrentIndex)
+final currentIndexProvider =
+    AutoDisposeNotifierProvider<CurrentIndex, int>.internal(
+  CurrentIndex.new,
+  name: r'currentIndexProvider',
+  debugGetCreateSourceHash:
+      const bool.fromEnvironment('dart.vm.product') ? null : _$currentIndexHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
+
+typedef _$CurrentIndex = AutoDisposeNotifier<int>;
+String _$currentQuizzHash() => r'75b217eaeec759136723bc235f17adb53f3c5a4c';
 
 /// See also [CurrentQuizz].
 @ProviderFor(CurrentQuizz)
